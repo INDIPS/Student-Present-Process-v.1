@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050914;
+    color: #e2e8f0;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(13, 22, 42, 0.84) 0%, rgba(8, 14, 29, 0.9) 100%);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.6), 0 12px 32px -12px rgba(2, 6, 23, 0.75);
+}
+
+.glass-panel-active {
+  background: linear-gradient(180deg, rgba(14, 27, 52, 0.9) 0%, rgba(9, 17, 35, 0.94) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.55);
+  box-shadow: 0 0 24px -6px rgba(14, 165, 233, 0.28), inset 0 1px 0 rgba(125, 211, 252, 0.14);
+}
+
+.access-granted-glow {
+  border-color: rgba(34, 197, 94, 0.65);
+  box-shadow: 0 0 28px -6px rgba(34, 197, 94, 0.35), inset 0 1px 0 rgba(134, 239, 172, 0.15);
+}
+
+.access-denied-glow {
+  border-color: rgba(239, 68, 68, 0.65);
+  box-shadow: 0 0 28px -6px rgba(239, 68, 68, 0.35), inset 0 1px 0 rgba(252, 165, 165, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

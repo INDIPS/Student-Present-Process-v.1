@@ -1,0 +1,6 @@
+{
+  "name": "AegisCampus Smart Attendance",
+  "description": "Smart School Attendance & Student Verification Management System with live biometric verification, classroom attendance, parent notifications, and role-based administration.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}
